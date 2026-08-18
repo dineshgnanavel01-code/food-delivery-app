@@ -64,7 +64,7 @@ export default function FoodDetails() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="text-center sm:text-left">
+            <div className="text-center lg:text-left">
               <span className="eyebrow mb-2 justify-center sm:justify-start">{restaurant?.name ?? "From our kitchen"}</span>
               <h1 className="font-display text-3xl font-extrabold sm:text-4xl">{food.name}</h1>
               <div className="mt-3 flex flex-wrap items-center gap-3 text-sm">

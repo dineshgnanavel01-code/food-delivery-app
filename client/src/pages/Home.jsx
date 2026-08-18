@@ -93,7 +93,7 @@ export default function Home() {
         {/* ── Promo ticket band ── */}
         <section className="container mb-14">
           <div className="ticket relative rounded-2xl bg-[oklch(0.88_0.09_90)] px-6 py-6 pb-7 sm:flex sm:items-center sm:gap-8">
-            <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
+            <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-4 lg:text-left">
               <BsStars className="h-7 w-7 text-[oklch(0.4_0.1_165)] shrink-0" />
               <div>
                 <h2 className="font-display text-xl font-bold text-[oklch(0.3_0.06_165)]">
@@ -115,8 +115,8 @@ export default function Home() {
 
         {/* ── Categories ── */}
         <section className="container mb-14">
-          <div className="mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:justify-between sm:text-left">
-            <div className="text-center sm:text-left">
+          <div className="mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:justify-between lg:text-left">
+            <div className="text-center lg:text-left">
               <span className="eyebrow mb-2 justify-center sm:justify-start">— Pick your flavor</span>
               <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
                 Browse by category
@@ -139,7 +139,7 @@ export default function Home() {
 
         {/* ── Popular restaurants ── */}
         <section className="container mb-14">
-          <div className="mb-6 text-center sm:text-left">
+          <div className="mb-6 text-center lg:text-left">
             <span className="eyebrow mb-2 justify-center sm:justify-start">— Popular this week</span>
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
               Loved by your neighbors
@@ -156,7 +156,7 @@ export default function Home() {
 
         {/* ── Recommended dishes ── */}
         <section className="container mb-14">
-          <div className="mb-6 text-center sm:text-left">
+          <div className="mb-6 text-center lg:text-left">
             <span className="eyebrow mb-2 justify-center sm:justify-start">— Chef's recommendations</span>
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
               Dishes worth writing home about

@@ -44,7 +44,7 @@ export default function RestaurantList() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="container flex-1 py-8">
-        <div className="mb-8 text-center fade-up sm:text-left">
+        <div className="mb-8 text-center fade-up lg:text-left">
           <span className="eyebrow mb-2 justify-center sm:justify-start">— Where the good stuff lives</span>
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">
             Restaurants near you
