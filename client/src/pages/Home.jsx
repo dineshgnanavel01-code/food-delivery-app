@@ -30,8 +30,8 @@ export default function Home() {
       <main className="flex-1">
         {/* ── Hero: asymmetric split ── */}
         <section className="container grid items-center gap-8 py-10 lg:py-16 lg:grid-cols-[1.15fr_1fr]">
-          <div className="fade-up">
-            <span className="eyebrow mb-5">Fresh from your neighborhood kitchens</span>
+          <div className="fade-up text-center lg:text-left">
+            <span className="eyebrow mb-5 justify-center lg:justify-start">Fresh from your neighborhood kitchens</span>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
               Tonight's cravings,{" "}
               <span className="relative inline-block text-emerald">
@@ -51,11 +51,11 @@ export default function Home() {
               </span>
               .
             </h1>
-            <p className="mt-6 max-w-md text-muted-foreground leading-relaxed">
+            <p className="mx-auto mt-6 max-w-md text-muted-foreground leading-relaxed lg:mx-0">
               Fresh from the market, straight to your table. Honest food from the
               best kitchens near you — delivered warm and fast.
             </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:items-center">
               <SearchBar value={query} onChange={setQuery} placeholder="What are you craving?" />
               <button
                 onClick={() => navigate("/restaurants")}
@@ -63,7 +63,7 @@ export default function Home() {
                 Browse menus
               </button>
             </div>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-2">
                 <FiTruck className="h-4 w-4 text-emerald" /> 25-min average delivery
               </span>
@@ -92,8 +92,8 @@ export default function Home() {
 
         {/* ── Promo ticket band ── */}
         <section className="container mb-14">
-          <div className="ticket relative rounded-2xl bg-[oklch(0.88_0.09_90)] px-6 py-6 sm:flex sm:items-center sm:gap-8">
-            <div className="flex items-center gap-4">
+          <div className="ticket relative rounded-2xl bg-[oklch(0.88_0.09_90)] px-6 py-6 pb-7 sm:flex sm:items-center sm:gap-8">
+            <div className="flex flex-col items-center gap-2 text-center sm:flex-row sm:gap-4 sm:text-left">
               <BsStars className="h-7 w-7 text-[oklch(0.4_0.1_165)] shrink-0" />
               <div>
                 <h2 className="font-display text-xl font-bold text-[oklch(0.3_0.06_165)]">
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
             <Link
               href="/checkout"
-              className="mt-3 sm:mt-0 shrink-0 rounded-full bg-[oklch(0.3_0.06_165)] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-150 hover:bg-[oklch(0.24_0.05_165)] active:scale-[0.97]">
+              className="mt-4 w-full justify-center sm:mt-0 sm:w-auto shrink-0 rounded-full bg-[oklch(0.3_0.06_165)] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-150 hover:bg-[oklch(0.24_0.05_165)] active:scale-[0.97] flex items-center">
               Claim offer <FiArrowRight className="ml-1 inline h-4 w-4" />
             </Link>
           </div>
@@ -115,9 +115,9 @@ export default function Home() {
 
         {/* ── Categories ── */}
         <section className="container mb-14">
-          <div className="mb-6 flex items-end justify-between gap-4">
-            <div>
-              <span className="eyebrow mb-2">— Pick your flavor</span>
+          <div className="mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-end sm:justify-between sm:text-left">
+            <div className="text-center sm:text-left">
+              <span className="eyebrow mb-2 justify-center sm:justify-start">— Pick your flavor</span>
               <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
                 Browse by category
               </h2>
@@ -139,8 +139,8 @@ export default function Home() {
 
         {/* ── Popular restaurants ── */}
         <section className="container mb-14">
-          <div className="mb-6">
-            <span className="eyebrow mb-2">— Popular this week</span>
+          <div className="mb-6 text-center sm:text-left">
+            <span className="eyebrow mb-2 justify-center sm:justify-start">— Popular this week</span>
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
               Loved by your neighbors
             </h2>
@@ -156,8 +156,8 @@ export default function Home() {
 
         {/* ── Recommended dishes ── */}
         <section className="container mb-14">
-          <div className="mb-6">
-            <span className="eyebrow mb-2">— Chef's recommendations</span>
+          <div className="mb-6 text-center sm:text-left">
+            <span className="eyebrow mb-2 justify-center sm:justify-start">— Chef's recommendations</span>
             <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
               Dishes worth writing home about
             </h2>
@@ -174,7 +174,7 @@ export default function Home() {
         {/* ── Live cart peek ── */}
         {items.length > 0 && (
           <section className="container mb-14 grid gap-6 lg:grid-cols-[1fr_380px]">
-            <div className="flex flex-col justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 text-center lg:items-start lg:text-left">
               <span className="eyebrow">— Your table is almost set</span>
               <h2 className="font-display text-2xl font-extrabold sm:text-3xl">
                 {items.length} {items.length === 1 ? "dish" : "dishes"} waiting in

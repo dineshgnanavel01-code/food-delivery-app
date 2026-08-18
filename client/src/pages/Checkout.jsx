@@ -95,8 +95,8 @@ export default function Checkout() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="container flex-1 py-8">
-        <div className="mb-8 fade-up">
-          <span className="eyebrow mb-2">— Final step</span>
+        <div className="mb-8 text-center fade-up sm:text-left">
+          <span className="eyebrow mb-2 justify-center sm:justify-start">— Final step</span>
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Checkout</h1>
           <p className="mt-2 text-muted-foreground">
             Tell us where to deliver — dinner will arrive warm.

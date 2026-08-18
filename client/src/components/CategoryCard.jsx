@@ -13,7 +13,7 @@ export default function CategoryCard({
     <button
       onClick={onClick}
       style={{ transform: `rotate(${tilt}deg)` }}
-      className={`group polaroid overflow-hidden bg-card text-left w-full transition-transform duration-200 ${
+      className={`tilt-rotate group polaroid overflow-hidden bg-card text-left w-full transition-transform duration-200 ${
         active ? "ring-2 ring-emerald ring-offset-2 ring-offset-background" : ""
       }`}>
       <div className="relative aspect-[4/3] overflow-hidden">

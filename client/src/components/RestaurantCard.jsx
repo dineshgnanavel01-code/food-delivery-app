@@ -15,7 +15,7 @@ export default function RestaurantCard({ restaurant, tilt = 0 }) {
   return (
     <div
       style={{ transform: `rotate(${tilt}deg)` }}
-      className="group polaroid flex flex-col overflow-hidden bg-card">
+      className="tilt-rotate group polaroid flex flex-col overflow-hidden bg-card">
       <Link href={`/restaurant/${restaurant.id}`} className="relative block aspect-[16/10] overflow-hidden">
         <img
           src={restaurant.image}

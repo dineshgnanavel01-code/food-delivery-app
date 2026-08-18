@@ -44,8 +44,8 @@ export default function RestaurantList() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="container flex-1 py-8">
-        <div className="mb-8 fade-up">
-          <span className="eyebrow mb-2">— Where the good stuff lives</span>
+        <div className="mb-8 text-center fade-up sm:text-left">
+          <span className="eyebrow mb-2 justify-center sm:justify-start">— Where the good stuff lives</span>
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">
             Restaurants near you
           </h1>
@@ -54,7 +54,7 @@ export default function RestaurantList() {
           </p>
         </div>
 
-        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
           <SearchBar value={query} onChange={setQuery} placeholder="Search by name, cuisine or tag…" />
           <label className="flex items-center gap-2 text-sm text-muted-foreground">
             <FiFilter className="h-4 w-4" />

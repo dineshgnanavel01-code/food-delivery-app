@@ -213,6 +213,14 @@
     box-shadow: 0 3px 8px -3px oklch(0 0 0 / 0.5);
   }
 
+  /* Polaroid tilt — intentionally disabled on mobile (<640px) so rotated cards
+     don't look off-center on narrow screens; tilt stays for sm+ where there is room. */
+  @media (max-width: 639px) {
+    .tilt-rotate {
+      transform: none !important;
+    }
+  }
+
   /* Receipt ticket with perforated edges */
   .ticket {
     position: relative;

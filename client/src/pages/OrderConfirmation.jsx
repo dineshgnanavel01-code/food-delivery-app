@@ -94,7 +94,7 @@ export default function OrderConfirmation() {
 
           {/* Tracking UI */}
           <section className="mt-8 rounded-3xl border border-border bg-card p-6">
-            <h2 className="eyebrow mb-5">
+            <h2 className="eyebrow mb-5 justify-center sm:justify-start">
               <FiMapPin className="h-3.5 w-3.5" /> Track your order
             </h2>
             <ol className="relative space-y-6">
@@ -125,7 +125,7 @@ export default function OrderConfirmation() {
 
           {/* Ordered items + total */}
           <section className="mt-6 rounded-3xl border border-border bg-card p-6">
-            <h2 className="eyebrow mb-4">
+            <h2 className="eyebrow mb-4 justify-center sm:justify-start">
               <FiPackage className="h-3.5 w-3.5" /> Ordered items
             </h2>
             <ul className="space-y-3 border-b border-dashed border-border pb-4">
