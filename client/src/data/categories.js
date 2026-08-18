@@ -1,42 +1,41 @@
 /*
- * DINA FOOD — "Emerald Harvest" fresh market style
- * Food category data for the UI kit.
+ * DINA FOOD — Indian cuisine categories (Salem · Omalur · Mettur · Tharamangalam)
  */
 export const categories = [
   {
-    id: "healthy",
-    name: "Healthy Bowls",
-    emoji: "🥗",
-    image: "/images/harveat-hero-bowl.jpg",
+    id: "tandoor",
+    name: "Tandoor & Curries",
+    emoji: "🍛",
+    image: "/images/indian-tandoori.jpg",
   },
   {
-    id: "burgers",
-    name: "Burgers",
-    emoji: "🍔",
-    image: "/images/harveat-burger.jpg",
+    id: "biryani",
+    name: "Biryani & Kebabs",
+    emoji: "🍚",
+    image: "/images/indian-biryani.jpg",
   },
   {
-    id: "italian",
-    name: "Italian",
-    emoji: "🍝",
-    image: "/images/harveat-pasta.jpg",
+    id: "southindian",
+    name: "South Indian",
+    emoji: "🥞",
+    image: "/images/indian-dosa.jpg",
   },
   {
-    id: "asian",
-    name: "Asian",
-    emoji: "🍜",
-    image: "/images/harveat-ramen.jpg",
+    id: "seafood",
+    name: "Coastal Seafood",
+    emoji: "🐟",
+    image: "/images/indian-fish-curry.jpg",
   },
   {
-    id: "mexican",
-    name: "Mexican",
-    emoji: "🌮",
-    image: "/images/harveat-tacos.jpg",
+    id: "streetfood",
+    name: "Street Food & Chaat",
+    emoji: "🥘",
+    image: "/images/indian-chaat.jpg",
   },
   {
     id: "desserts",
-    name: "Desserts",
-    emoji: "🍰",
-    image: "/images/harveat-dessert.jpg",
+    name: "Indian Sweets",
+    emoji: "🍯",
+    image: "/images/indian-mithai.jpg",
   },
 ];

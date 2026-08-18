@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import RestaurantList from "./pages/RestaurantList";
+import Dishes from "./pages/Dishes";
 import RestaurantDetails from "./pages/RestaurantDetails";
 import FoodDetails from "./pages/FoodDetails";
 import Cart from "./pages/Cart";
@@ -25,6 +26,7 @@ function Router() {
     <Switch>
       <Route path={"/"} component={Home} />
       <Route path={"/restaurants"} component={RestaurantList} />
+      <Route path={"/dishes"} component={Dishes} />
       <Route path={"/restaurant/:id"} component={RestaurantDetails} />
       <Route path={"/food/:id"} component={FoodDetails} />
       <Route path={"/cart"} component={Cart} />

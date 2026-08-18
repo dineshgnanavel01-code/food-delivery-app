@@ -70,6 +70,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: "Home" },
     { href: "/restaurants", label: "Restaurants" },
+    { href: "/dishes", label: "Dishes" },
     { href: "/cart", label: "Cart" },
   ];
 

@@ -69,7 +69,7 @@ export default function RestaurantCard({ restaurant, tilt = 0 }) {
             <FiClock className="h-3.5 w-3.5" />
             {restaurant.deliveryFee === 0 ? "Free" : `$${restaurant.deliveryFee.toFixed(2)}`}
           </span>
-          <span className="ml-auto">{restaurant.distance}</span>
+          <span className="ml-auto">{restaurant.distance} · {restaurant.address.split(", ").slice(-1)[0]}</span>
         </div>
       </div>
     </div>
