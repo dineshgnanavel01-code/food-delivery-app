@@ -1,6 +1,6 @@
 from playwright.sync_api import sync_playwright
 
-BASE = "http://localhost:3000"
+BASE = "https://food-dina.vercel.app"
 PAGES = {"/": "home", "/cart": "cart", "/checkout": "checkout", "/restaurants": "restaurants"}
 WIDTHS = [368, 768]
 
