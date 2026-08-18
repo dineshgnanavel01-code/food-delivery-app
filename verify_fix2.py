@@ -5,9 +5,9 @@ with sync_playwright() as p:
     for vw, name in [(368, "fix_368b"), (427, "fix_427b")]:
         ctx = b.new_context(viewport={"width": vw, "height": 814}, device_scale_factor=2, is_mobile=True, has_touch=True, user_agent=UA)
         pg = ctx.new_page()
-        pg.goto("http://localhost:3000/cart", wait_until="domcontentloaded", timeout=60000)
+        pg.goto("https://food-dina.vercel.app/cart", wait_until="domcontentloaded", timeout=60000)
         pg.wait_for_timeout(1000)
-        pg.goto("http://localhost:3000/", wait_until="domcontentloaded")
+        pg.goto("https://food-dina.vercel.app/", wait_until="domcontentloaded")
         pg.wait_for_timeout(2000)
         pg.query_selector("main a[href*='/restaurant/']").click()
         pg.wait_for_timeout(2000)

@@ -3,10 +3,14 @@
  * Photo thumbnail, name, quantity controls, price, remove button.
  */
 import { FiMinus, FiPlus, FiTrash2 } from "react-icons/fi";
+import { getFoodById } from "../data/foods";
 import { useCart } from "../context/CartContext";
 
 export default function CartItem({ entry, horizontal = false }) {
-  const { food, quantity } = entry;
+  // Resolve the latest food record by id so cart rows always show the
+  // current image/name/price even if the stored cart entry is stale.
+  const { quantity } = entry;
+  const food = getFoodById(entry.food.id) ?? entry.food;
   const { increaseQty, decreaseQty, removeFromCart } = useCart();
 
   if (horizontal) {

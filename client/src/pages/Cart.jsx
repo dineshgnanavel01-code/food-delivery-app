@@ -15,7 +15,7 @@ export default function Cart() {
     <div className="min-h-screen flex flex-col">
       <main className="container flex-1 py-8">
         <div className="mb-8 text-center fade-up lg:text-left">
-          <span className="eyebrow mb-2 justify-center sm:justify-start">— Almost there</span>
+          <span className="eyebrow mb-2 justify-center sm:justify-start">Almost there</span>
           <h1 className="font-display text-3xl font-extrabold sm:text-4xl">Your cart</h1>
         </div>
 
