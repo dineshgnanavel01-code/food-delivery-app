@@ -126,10 +126,14 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+    max-width: 100%;
   }
   body {
     @apply bg-background text-foreground font-sans;
     font-family: var(--font-sans);
+    overflow-x: clip;
+    max-width: 100%;
   }
   .font-display {
     font-family: var(--font-display);

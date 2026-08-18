@@ -22,7 +22,7 @@ export default function OrderSummary({ checkout = false }) {
   const [error, setError] = useState("");
 
   return (
-    <aside className="rounded-3xl border border-border bg-card p-5 shadow-sm">
+    <aside className="rounded-3xl border border-border bg-card p-4 sm:p-5 shadow-sm overflow-x-clip">
       <h3 className="eyebrow mb-4">Order summary</h3>
 
       <ul className="space-y-3 border-b border-dashed border-border pb-4">
@@ -32,8 +32,8 @@ export default function OrderSummary({ checkout = false }) {
       </ul>
 
       {/* Promo code */}
-      <div className="flex items-center gap-2 py-4">
-        <div className="relative flex-1">
+      <div className="flex flex-wrap items-center gap-2 py-4">
+        <div className="relative flex-1 min-w-0">
           <BsTag className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <input
             value={code}
@@ -57,7 +57,7 @@ export default function OrderSummary({ checkout = false }) {
             if (!ok) setError("Invalid code");
             else setError("");
           }}
-          className="h-9 rounded-full border border-emerald/40 px-4 text-sm font-semibold text-emerald hover:bg-emerald hover:text-white transition-colors duration-150 active:scale-[0.96]">
+          className="h-9 rounded-full border border-emerald/40 px-4 text-sm font-semibold text-emerald hover:bg-emerald hover:text-white transition-colors duration-150 active:scale-[0.96] shrink-0">
           Apply
         </button>
       </div>
@@ -69,7 +69,7 @@ export default function OrderSummary({ checkout = false }) {
       {error && <p className="-mt-2 mb-3 text-xs font-semibold text-destructive">{error}</p>}
 
       {/* Breakdown */}
-      <dl className="space-y-2 text-sm">
+      <dl className="space-y-2 text-sm min-w-0">
         <div className="flex justify-between text-foreground/70">
           <dt>Subtotal</dt>
           <dd className="tabular-nums">${subtotal.toFixed(2)}</dd>

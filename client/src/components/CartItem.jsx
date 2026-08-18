@@ -28,7 +28,7 @@ export default function CartItem({ entry, horizontal = false }) {
   }
 
   return (
-    <div className="group flex items-center gap-3 sm:gap-4 rounded-2xl border border-border bg-card p-3 sm:p-4 transition-all duration-200 hover:shadow-md">
+    <div className="group flex flex-wrap items-center gap-2 sm:flex-nowrap sm:gap-4 rounded-2xl border border-border bg-card p-2.5 sm:p-4 overflow-x-clip transition-all duration-200 hover:shadow-md">
       <img
         src={food.image}
         alt={food.name}
@@ -42,7 +42,7 @@ export default function CartItem({ entry, horizontal = false }) {
           ${food.price.toFixed(2)}
         </p>
       </div>
-      <div className="flex items-center gap-1.5 sm:gap-2">
+      <div className="flex items-center gap-1 sm:gap-2 shrink-0 sm:min-w-[108px] justify-end sm:justify-start">
         <button
           onClick={() => decreaseQty(food.id)}
           aria-label="Decrease quantity"
@@ -57,8 +57,8 @@ export default function CartItem({ entry, horizontal = false }) {
           <FiPlus className="h-3.5 w-3.5" />
         </button>
       </div>
-      <div className="flex flex-col items-end gap-1.5 sm:gap-2 shrink-0">
-        <span className="font-display text-base sm:text-lg font-bold tabular-nums text-foreground">
+      <div className="flex flex-col items-end gap-1 sm:gap-2 sm:shrink-0 shrink min-w-[88px] sm:min-w-0">
+        <span className="font-display text-base sm:text-lg font-bold tabular-nums text-foreground whitespace-nowrap">
           ${(food.price * quantity).toFixed(2)}
         </span>
         <button

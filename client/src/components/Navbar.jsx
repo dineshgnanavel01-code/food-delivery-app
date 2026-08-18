@@ -82,10 +82,10 @@ export default function Navbar() {
       }`}>
       <div className="container flex h-16 items-center justify-between gap-4">
         {/* Wordmark */}
-        <Link href="/" className="flex items-center gap-2.5 shrink-0">
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
           {LOGO_MARK}
           <span className="sr-only">Dina Food logo</span>
-          <span className="font-display text-2xl font-extrabold text-foreground tracking-tight">
+          <span className="font-display text-xl sm:text-2xl font-extrabold text-foreground tracking-tight">
             Dina Food
           </span>
         </Link>
@@ -107,7 +107,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right utilities */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 sm:gap-2">
           <div className="relative hidden lg:block">
             <button
               onClick={() => setLocationOpen((v) => !v)}
@@ -148,14 +148,14 @@ export default function Navbar() {
           {/* Compact search icon for small screens (between desktop pill and theme toggle) */}
           <Link
             href="/restaurants"
-            className="lg:hidden p-2.5 rounded-full text-foreground hover:bg-secondary transition-colors"
+            className="lg:hidden p-1.5 sm:p-2.5 rounded-full text-foreground hover:bg-secondary transition-colors"
             aria-label="Search">
             <SearchIcon className="h-5 w-5 shrink-0" />
           </Link>
 
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-full hover:bg-secondary transition-colors"
+            className="p-1.5 sm:p-2.5 rounded-full hover:bg-secondary transition-colors"
             aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}>
             {theme === "light" ? (
               <FiMoon className="h-5 w-5" />
@@ -164,8 +164,8 @@ export default function Navbar() {
             )}
           </button>
 
-          <Link href="/cart" className="relative p-2.5 rounded-full hover:bg-secondary transition-colors">
-            <FiShoppingCart className="h-5 w-5" />
+          <Link href="/cart" className="relative p-1.5 sm:p-2.5 rounded-full hover:bg-secondary transition-colors">
+            <FiShoppingCart className="h-4 w-4 sm:h-5 sm:w-5" />
             {count > 0 && (
               <span
                 key={count}
@@ -178,10 +178,10 @@ export default function Navbar() {
           </Link>
 
           <button
-            className="md:hidden p-2.5 rounded-full hover:bg-secondary transition-colors"
+            className="md:hidden p-1.5 sm:p-2.5 rounded-full hover:bg-secondary transition-colors"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu">
-            {mobileOpen ? <FiX className="h-5 w-5" /> : <FiMenu className="h-5 w-5" />}
+            {mobileOpen ? <FiX className="h-4 w-4 sm:h-5 sm:w-5" /> : <FiMenu className="h-4 w-4 sm:h-5 sm:w-5" />}
           </button>
         </div>
       </div>
