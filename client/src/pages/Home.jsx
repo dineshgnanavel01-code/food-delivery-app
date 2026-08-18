@@ -78,8 +78,8 @@ export default function Home() {
 
           <div className="relative hidden lg:block">
             <img
-              src="/images/harveat-hero-bowl.jpg"
-              alt="Fresh harvest grain bowl with avocado and juice"
+              src="/images/dina-hero-platter.png"
+              alt="Grand round platter of grilled dishes, rice and sides"
               className="polaroid w-full rotate-[1.5deg] object-cover"
             />
             <img
