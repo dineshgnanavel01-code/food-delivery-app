@@ -1,0 +1,67 @@
+/**
+ * Wanderpost — mock travel package data (assignment brief)
+ * 6 named packages: Bali Escape, Dubai Adventure, Paris Experience,
+ * Maldives Getaway, Swiss Alps Tour, Singapore Explorer.
+ */
+export const packages = [
+  {
+    id: "bali-escape",
+    name: "Bali Escape",
+    destination: "Bali, Indonesia",
+    image: "/manus-storage/bali_f504f8a6.jpg",
+    duration: "7 Days / 6 Nights",
+    rating: 4.9,
+    reviews: 142,
+    price: 1089,
+  },
+  {
+    id: "dubai-adventure",
+    name: "Dubai Adventure",
+    destination: "Dubai, UAE",
+    image: "/manus-storage/dubai_c77f832e.jpg",
+    duration: "5 Days / 4 Nights",
+    rating: 4.8,
+    reviews: 97,
+    price: 1450,
+  },
+  {
+    id: "paris-experience",
+    name: "Paris Experience",
+    destination: "Paris, France",
+    image: "/manus-storage/paris_7a628b1f.jpg",
+    duration: "6 Days / 5 Nights",
+    rating: 4.9,
+    reviews: 186,
+    price: 1299,
+  },
+  {
+    id: "maldives-getaway",
+    name: "Maldives Getaway",
+    destination: "Malé, Maldives",
+    image: "/manus-storage/maldives_c01b8746.jpg",
+    duration: "6 Days / 5 Nights",
+    rating: 5.0,
+    reviews: 74,
+    price: 1790,
+  },
+  {
+    id: "swiss-alps-tour",
+    name: "Swiss Alps Tour",
+    destination: "Interlaken, Switzerland",
+    image: "/manus-storage/swiss-alps_351e5854.jpg",
+    duration: "8 Days / 7 Nights",
+    rating: 4.9,
+    reviews: 113,
+    price: 1650,
+  },
+  {
+    id: "singapore-explorer",
+    name: "Singapore Explorer",
+    destination: "Singapore",
+    image: "/manus-storage/singapore_55b83342.jpg",
+    duration: "5 Days / 4 Nights",
+    rating: 4.7,
+    reviews: 88,
+    price: 1120,
+  },
+];
