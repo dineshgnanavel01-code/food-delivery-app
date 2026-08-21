@@ -3,17 +3,76 @@
  * Search + status + payment filters, warm row highlights,
  * status pills in jewel tones, responsive (columns stack to cards on mobile).
  */
-import { useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Eye, Search } from "lucide-react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { createContext, useContext, useEffect, useRef, useMemo, useState } from "react";
+import { ChevronDown, ChevronLeft, ChevronRight, Eye, Search } from "lucide-react";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 import { orders, statusTone } from "@/data/dashboard";
-import { cn } from "@/lib/utils";
+
+// ---- Inline helpers (keeps this file self-contained) ----
+const cn = (...inputs) => twMerge(clsx(inputs));
+
+const SelectContext = createContext({});
+
+function Select({ children, value, onValueChange }) {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+  return (
+    <SelectContext.Provider value={{ value, onValueChange, open, close, toggle: () => setOpen((o) => !o) }}>
+      <div className="relative inline-block">{children}</div>
+    </SelectContext.Provider>
+  );
+}
+
+function SelectTrigger({ children, className }) {
+  const { open, toggle } = useContext(SelectContext);
+  return (
+    <button type="button" onClick={() => toggle()}
+      aria-expanded={open}
+      className={cn("inline-flex h-9 w-full items-center justify-between gap-2 rounded-lg border border-white/15 bg-white/10 px-3 text-sm text-white outline-none transition-shadow focus:ring-2 focus:ring-ring/30", className)}
+    >
+      {children}
+      <ChevronDown className={cn("size-4 opacity-60 transition-transform", open && "rotate-180")} />
+    </button>
+  );
+}
+
+function SelectValue({ placeholder }) {
+  const { value } = useContext(SelectContext);
+  return <span className="truncate">{value && value !== "all" ? value : placeholder || value}</span>;
+}
+
+function SelectContent({ children }) {
+  const { open, close } = useContext(SelectContext);
+  const ref = useRef(null);
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => { if (e.key === "Escape") close(); };
+    const onClick = (e) => { if (ref.current && !ref.current.contains(e.target)) close(); };
+    document.addEventListener("keydown", onKey);
+    const t = setTimeout(() => document.addEventListener("click", onClick), 0);
+    return () => { document.removeEventListener("keydown", onKey); clearTimeout(t); document.removeEventListener("click", onClick); };
+  }, [open, close]);
+  if (!open) return null;
+  return (
+    <div ref={ref} role="listbox" className="animate-in-rise absolute right-0 z-50 mt-1.5 w-44 overflow-hidden rounded-xl border border-border bg-popover p-1 text-popover-foreground shadow-lg">
+      {children}
+    </div>
+  );
+}
+
+function SelectItem({ children, value, className }) {
+  const { value: selected, onValueChange, close } = useContext(SelectContext);
+  return (
+    <button type="button" role="option" aria-selected={selected === value}
+      onClick={() => { onValueChange?.(value); close(); }}
+      className={cn("flex w-full cursor-pointer items-center rounded-lg px-2 py-2 text-sm outline-none transition-colors hover:bg-accent hover:text-accent-foreground", selected === value && "bg-accent font-medium", className)}
+    >
+      {children}
+    </button>
+  );
+}
+// ---- end inline helpers ----
 
 function StatusPill({ status }) {
   const t = statusTone[status];

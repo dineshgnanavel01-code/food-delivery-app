@@ -7,8 +7,12 @@
 import { useEffect, useState } from "react";
 import { HelpCircle, LayoutDashboard, Package, Settings, ShoppingBag, Users, X } from "lucide-react";
 import { toast } from "sonner";
-import { cn } from "@/lib/utils";
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 import Header from "./Header";
+
+// Inline cn helper (keeps this file self-contained)
+const cn = (...inputs) => twMerge(clsx(inputs));
 
 const LOGO = "/manus-storage/verdant-logo_34670e17.png";
 const HERO = "/manus-storage/hero-store_dd577520.png";
